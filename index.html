@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAST Paper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="publications" class="in-view">
+        <div class="content-box">
+            <h2 class="title-font text-5xl mb-4">Improving Cross-Domain Robustness of Speech-Based Alzheimer’s Disease
+                Detection with Unsupervised Domain Adaptation</h2>
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <span class="text-amber-700 font-bold text-xs tracking-widest">2026</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-6">Abstract</h3>
+                    <p class="text-lg">
+                        As Alzheimer’s disease (AD) has increasingly become a major global public health issue, speech-based AD detection has attracted widespread attention. However, most existing methods are trained and evaluated on a single dataset, often leading to severe cross-domain performance degradation due to reliance on dataset-specific artifacts rather than disease-related speech cues. In real-world applications, reliable Alzheimer’s disease detection requires models that are robust to variations in recording environments, speakers and data collection conditions. To address this challenge, this paper adopts unsupervised domain adaptation to learn robust, domain-invariant feature representations in the absence of target-domain diagnosis labels. On this basis, a novel unsupervised domain adaptation method, Iterative Adversarial Self-Training (IAST), is proposed. Experimental results demonstrate that IAST significantly improves the generalization ability and robustness of the models under various cross-domain settings.
+                    </p>
+            </div>
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold mt-2 mb-6">Key Contributions</h3>
+                    <ul class="list-disc list-inside space-y-3 text-lg">
+                        <li>We design three AD detection models with increasing representational capacity, spanning handcrafted acoustic features, pre-trained self-supervised speech embeddings, and task-specific fine-tuning.</li>
+                        <li>We conduct a systematic cross-domain evaluation of AD detection across multiple models and unsupervised domain adaptation strategies.</li>
+                        <li>We propose a novel unsupervised domain adaptation method, Iterative Adversarial Self-Training (IAST), which significantly improves cross-domain generalization and robustness.</li>
+                    </ul>
+            </div>
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold mt-2 mb-6">Model Architecture</h3>
+                        <div class="flex gap-6">
+                            <img src="images/Model Architecture.png" alt="Model Architecture" class="block mx-auto w-1/2 h-auto">
+                        </div>
+                        <p class="text-lg">
+                            We implement three speech-based Alzheimer’s disease detection models with increasing representational capacity: an eGeMAPS-based model using handcrafted acoustic features (Figure a), a pre-trained embedding-based model with frozen parameters (Figure b), and a fine-tuned pre-trained model for the target task (Figure c).
+                        </p>
+                        <br>
+                        <a href="Publish Code.zip" download class="text-base font-bold border-b border-slate-800">Download Code</a>
+                </div>
+            </div>
+            <div class="space-y-8 mt-10">
+                    <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                        <h3 class="text-2xl font-bold mt-2 mb-6">Iterative Adversarial Self-Training (IAST)</h3>
+                        <div class="flex gap-6">
+                            <img src="images/IAST Pipeline.png" alt="IAST Pipeline" class="block mx-auto w-1/2 h-auto">
+                        </div>
+                        <p class="text-lg">Iterative Adversarial Self-Training (IAST) is the unsupervised domain adaptation method proposed in this paper, which combines the advantages of DAT and ST in cross-domain learning. The key idea of IAST is to progressively improve target-domain pseudo-label quality through repeated feature alignment and target-domain adaptation. The proposed pipeline of Iterative Adversarial Self-Training is illustrated in Figure.</p>
+                </div>
+            </div>
+            <div class="space-y-8 mt-10">
+                <div class="p-8 bg-white/50 rounded-xl border border-white hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold mt-2 mb-6">Experience and Results</h3>
+                    <div class="flex gap-6">
+                        <img src="images/table.png" alt="IAST Pipeline" class="block mx-auto w-3/4 h-auto">
+                    </div>
+                    <p class="text-lg"> As shown in Table, IAST consistently yields the strongest target-domain performance across different model architectures and source–target settings, outperforming or matching the best results achieved by traditional unsupervised domain adaptation methods.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+</html>
